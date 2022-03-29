@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Device List",
+      "type": "shell",
+      "command": "pio device list",
+      "problemMatcher": []
+    },
+    {
+      "label": "Upload",
+      "type": "shell",
+      "command": "pio run -t upload --upload-port ${input:device}",
+      "problemMatcher": []
+    },
+    {
+      "label": "Device Monitor",
+      "type": "shell",
+      "command": "pio device monitor -p ${input:device}",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "device",
+      "description": "Input device name.",
+      "type": "promptString"
+    }
+  ]
+}
